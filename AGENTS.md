@@ -68,9 +68,38 @@ Primary environment variables:
 - Keep API client code isolated from normalization and source parsing.
 - Favor deterministic dedupe heuristics over speculative fuzzy matching systems.
 
+## Required Skills And Owning Agent
+
+Primary skill:
+
+- `rccc-ingestion-worker`
+
+Supporting skills:
+
+- `rccc-contracts`
+- `rccc-handoffs-json`
+- `rccc-testing`
+- `rccc-git-pr`
+
+Expected owning agent:
+
+- `ingestion-agent`
+
+Invoke supporting skills when:
+
+- canonical payload expectations change: `rccc-contracts`
+- another agent depends on your output: `rccc-handoffs-json`
+- the task is primarily validation or fixture/test work: `rccc-testing`
+- the task is complete and needs closeout: `rccc-git-pr`
 ## Coordination Rules
 
 - Before starting work, claim or update the relevant task in the root [tasks.md](../tasks.md).
+- If another agent will need your output, create or update `../handoffs/TASK-###-slug/` and record the task brief, handoff, decisions, and related files as JSON.
+- Use the shared schemas in `../handoffs/schemas/` and keep all handoff `related_files` workspace-relative.
+- When a repository task is complete, finish it with a git commit, push the branch, and open or update a pull request unless the task is explicitly documentation-only workspace coordination outside that repository.
 - If the canonical payload changes, coordinate with `rccc-api` before implementation.
 - Do not absorb backend business rules, scoring logic, or web-facing concerns into this repo.
 - Avoid scraping or automation approaches that create unnecessary legal or maintenance risk when stable source APIs or feeds are available.
+
+
+
