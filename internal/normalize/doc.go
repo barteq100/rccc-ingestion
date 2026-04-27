@@ -1,4 +1,3 @@
 package normalize
 
-// Package normalize will transform raw provider payloads into canonical DTOs.
-
+// Package normalize transforms parsed source records into canonical jobs.

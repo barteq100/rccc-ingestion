@@ -1,4 +1,3 @@
 package sources
 
-// Package sources will hold provider-specific fetchers and parsers.
-
+// Package sources defines provider adapter boundaries for ingestion.

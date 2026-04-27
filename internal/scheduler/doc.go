@@ -1,4 +1,3 @@
 package scheduler
 
-// Package scheduler will hold polling cadence and retry policy orchestration.
-
+// Package scheduler wires fetch, parse, normalize, dedupe, and deliver stages.
