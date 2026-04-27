@@ -1,4 +1,3 @@
 package dedupe
 
-// Package dedupe will hold obvious duplicate detection heuristics.
-
+// Package dedupe applies deterministic duplicate filtering before delivery.

@@ -1,4 +1,3 @@
 package client
 
-// Package client will hold outbound integration with rccc-api.
-
+// Package client sends canonical jobs to rccc-api over REST.
